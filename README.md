@@ -1,23 +1,24 @@
 # Yuriy Pisarev
 
-I write Object Pascal. Below are four repositories built on one another: a parser, a plotting engine, an editor plugin, and a browser demo.
+I write Object Pascal and build tools for Delphi and Free Pascal.
 
-### Published
+## CrossPascal
 
-**[pascal-mathparser](https://github.com/pisarev/pascal-mathparser)** - an expression parser and a virtual machine. A formula compiles to a flat byte array and runs by a linear pass over it, with no allocation on the path of an ordinary formula. On x86-64 an optional accelerator turns that bytecode into machine code and hands back anything it declines, so an answer is never fast but wrong. Delphi 10.2 Tokyo through 13, Free Pascal 3.2.2 and 3.3.1, Windows and Linux.
+I'm building [CrossPascal](https://github.com/pisarev/crosspascal) to run trained models and process images in Delphi and Lazarus applications. It uses Apache TVM for model inference and includes Pascal bindings for OpenCV and Leptonica.
 
-**[pascal-crossgraph](https://github.com/pisarev/pascal-crossgraph)** - a plotting engine and a visual component that draw what the parser computes: curves with their discontinuities, intersections and extrema, cartesian and polar systems, surfaces with contour lines. The engine knows nothing about a canvas and builds headless.
+The Windows x64 early access release includes 13 examples. You can resize an image, run object detection, or ask a model about a photo. Run the example's `Prepare.cmd` to download its dependencies and sample files.
 
-**[graphbuilder-npp](https://github.com/pisarev/graphbuilder-npp)** - a plugin for Notepad++. Point at a line in the editor and, if it parses as a formula, the curve appears with its roots and extrema marked. The report goes back the other way, to a new tab as Markdown with the curve embedded as SVG.
+[Browse the examples](https://pisarev.github.io/crosspascal-live/) or [get Early Access 017](https://github.com/pisarev/crosspascal/releases/tag/early-access-017).
 
-**[mathparser-live](https://github.com/pisarev/mathparser-live)** - the same engine compiled to WebAssembly. [Try it in a browser](https://pisarev.github.io/mathparser-live/demo/); nothing to install.
+## Math and plotting tools
 
-All four are MIT.
+- **[pascal-mathparser](https://github.com/pisarev/pascal-mathparser)** compiles expressions to bytecode. The virtual machine evaluates ordinary formulas without allocating memory. An optional x86-64 accelerator compiles supported bytecode to machine code and falls back to the virtual machine when needed. Supports Delphi 10.2 Tokyo through Delphi 13 and Free Pascal 3.2.2 and 3.3.1 on Windows and Linux.
+- **[pascal-crossgraph](https://github.com/pisarev/pascal-crossgraph)** draws Cartesian and polar curves, marks discontinuities, intersections and extrema, and plots surfaces with contour lines. The plotting engine can run without a canvas.
+- **[graphbuilder-npp](https://github.com/pisarev/graphbuilder-npp)** plots formulas from a line in Notepad++ and marks roots and extrema. It can open a Markdown report with the SVG plot in a new tab.
+- **[mathparser-live](https://github.com/pisarev/mathparser-live)** runs the math and plotting tools in the browser via WebAssembly. [Try the demo](https://pisarev.github.io/mathparser-live/demo/).
 
-### What I am building now
+These four projects use the MIT license.
 
-Bindings to modern OpenCV and to Leptonica for Delphi. After that, TVM with a set of the models people actually run: the YOLO family, PaddleOCR for detection and recognition, and segmentation.
-
-### Contact
+## Contact
 
 ypisareff@outlook.com
