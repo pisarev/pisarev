@@ -6,7 +6,7 @@ I write Object Pascal and build tools for Delphi and Free Pascal.
 
 I'm building [CrossPascal](https://github.com/pisarev/crosspascal) to run trained models and process images in Delphi and Lazarus applications. It uses Apache TVM for model inference and includes Pascal bindings for OpenCV and Leptonica.
 
-The Windows x64 releases include examples for resizing images, detecting objects, and asking a model about a photo. Run the example's `Prepare.cmd` to download its dependencies and sample files.
+The Windows x64 releases include examples for resizing images, detecting objects, reading text from photos with PaddleOCR, and asking a model about a photo. Run the example's `Prepare.cmd` to download its dependencies and sample files.
 
 [Browse the examples](https://pisarev.github.io/crosspascal-live/) or [download CrossPascal](https://github.com/pisarev/crosspascal/releases).
 
